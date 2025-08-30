@@ -35,6 +35,7 @@ public class mcapillage
     // Create a Deferred Register to hold CreativeModeTabs
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
+    public static Traits.Trait PILLAGER;
 
     public mcapillage(FMLJavaModLoadingContext context)
     {
@@ -42,7 +43,7 @@ public class mcapillage
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
-        public static Traits.Trait PILLAGER = Traits.registerTrait("PILLAGER",0.0f,1.0f);
+        PILLAGER = Traits.registerTrait("PILLAGER",0.0f,1.0f);
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
